@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const PlaybillContainer = styled.div`
   height: 415px;
-  width: 300px;
+  width: 250px;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
@@ -32,16 +32,13 @@ const PlaybillTitle = styled.div`
 
 const PlaybillImage = styled.img`
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   height: 300px;
   width: 250px;
-  margin-bottom: 10px;
 `;
 
-const Playbill = ({ title, imageUrl }) => {
+const Playbill = ({ title, imageUrl, onClick }) => {
   return (
-    <PlaybillContainer>
+    <PlaybillContainer onClick={onClick}>
       <PlaybillHeader>Virtual Playbill</PlaybillHeader>
       <PlaybillTitle>{title}</PlaybillTitle>
       <PlaybillImage src={imageUrl} />

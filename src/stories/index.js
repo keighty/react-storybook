@@ -22,6 +22,7 @@ storiesOf("Button", module)
 storiesOf("Playbill", module)
   .add("basic", () => (
     <Playbill
+      onClick={action("navigate to playbill")}
       title="foo"
       imageUrl="https://virtualplaybill.s3.amazonaws.com/1517893742975_Magellanica"
     />
